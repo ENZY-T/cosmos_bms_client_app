@@ -1,40 +1,27 @@
 import React from 'react';
 
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-} from 'react-native';
+import {SafeAreaView, View, StatusBar, StyleSheet, Text} from 'react-native';
+import SensorMapFloorGround from './app/screens/SensorMapFloorGround';
 
 const App = () => {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.sectionContainer}>
       <StatusBar />
-      <ScrollView contentInsetAdjustmentBehavior="automatic">
-        <Text>Hello</Text>
-      </ScrollView>
+      <View style={styles.content} contentInsetAdjustmentBehavior="automatic">
+        <SensorMapFloorGround />
+      </View>
     </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    height: '100%',
+    width: '100%',
   },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
+  content: {
+    height: '100%',
+    width: '100%',
   },
 });
 
